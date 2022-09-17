@@ -79,4 +79,11 @@ public class PieceTest {
         assertTrue(piece.isCaptured() == false);
     }
 
+    @Test
+    @DisplayName("Check that piece has been captured")
+    void pieceShouldBeCaptured() {
+        Piece piece = new Piece(PieceType.KING, PieceColor.WHITE, true);
+        assertTrue(piece.isCaptured() == true);
+    }
+
 }
