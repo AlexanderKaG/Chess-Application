@@ -3,13 +3,12 @@ package se.alexander.portfolio.chess;
 public class Piece {
     private PieceType pieceType;
     private PieceColor color;
-    private boolean captured;
+    private boolean captured = false;
     private Square currentPosition;
 
-    public Piece(PieceType pieceType, PieceColor color, boolean captured, Square currentPosition) {
+    public Piece(PieceType pieceType, PieceColor color, Square currentPosition) {
         this.pieceType = pieceType;
         this.color = color;
-        this.captured = captured;
         this.currentPosition = currentPosition;
     }
 
