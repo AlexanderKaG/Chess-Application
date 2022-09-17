@@ -43,4 +43,9 @@ public class Piece {
     public Square getCurrentPosition() {
         return currentPosition;
     }
+
+    public Square move(Square newSquare) {
+        currentPosition = newSquare;
+        return getCurrentPosition();
+    }
 }

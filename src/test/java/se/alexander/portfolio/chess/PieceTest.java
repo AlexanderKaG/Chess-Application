@@ -4,6 +4,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.convert.DataSizeUnit;
 
+import java.nio.file.Files;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -93,6 +95,14 @@ public class PieceTest {
         Square square = Square.E1;
         Piece piece = new Piece(PieceType.KING, PieceColor.WHITE, false, Square.E1);
         assertEquals(square, piece.getCurrentPosition());
+    }
+
+    @Test
+    @DisplayName("Piece can move to another square")
+    void pieceShouldMoveFromE1ToE2() {
+        Square square = Square.E2;
+        Piece piece = new Piece(PieceType.KING, PieceColor.WHITE, false, Square.E1);
+        assertEquals(square, piece.move(Square.E2));
     }
 
 }
