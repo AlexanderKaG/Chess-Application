@@ -2,6 +2,7 @@ package se.alexander.portfolio.chess;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.convert.DataSizeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -84,6 +85,14 @@ public class PieceTest {
     void pieceShouldBeCaptured() {
         Piece piece = new Piece(PieceType.KING, PieceColor.WHITE, true);
         assertTrue(piece.isCaptured() == true);
+    }
+
+    @Test
+    @DisplayName("Checks that a piece is on e1")
+    void pieceShouldBeOnSquareE1() {
+        Square square = Square.E1;
+        Piece piece = new Piece(PieceType.KING, PieceColor.WHITE, false, Square.E1);
+        assertEquals(square, piece.getCurrentPosition());
     }
 
 }
