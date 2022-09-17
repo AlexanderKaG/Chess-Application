@@ -4,12 +4,12 @@ public class Piece {
     private PieceType pieceType;
     private final Color color;
     private boolean captured = false;
-    private SquareCoordinate currentSquareCoordinate;
+    private Square currentSquare;
 
-    public Piece(PieceType pieceType, Color color, SquareCoordinate currentSquareCoordinate) {
+    public Piece(PieceType pieceType, Color color, Square currentSquare) {
         this.pieceType = pieceType;
         this.color = color;
-        this.currentSquareCoordinate = currentSquareCoordinate;
+        this.currentSquare = currentSquare;
     }
 
     public PieceType getPieceType() {
@@ -28,13 +28,13 @@ public class Piece {
         this.captured = captured;
     }
 
-    public SquareCoordinate getCurrentSquare() {
-        return currentSquareCoordinate;
+    public SquareCoordinate getCurrentSquareCoordinate() {
+        return currentSquare.getCoordinate();
     }
 
-    public SquareCoordinate move(SquareCoordinate newSquareCoordinate) {
-        currentSquareCoordinate = newSquareCoordinate;
-        return getCurrentSquare();
+    public SquareCoordinate move(Square newSquare) {
+        this.currentSquare = newSquare;
+        return getCurrentSquareCoordinate();
     }
 
 }
