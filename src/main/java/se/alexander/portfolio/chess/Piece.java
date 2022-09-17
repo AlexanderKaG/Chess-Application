@@ -2,11 +2,11 @@ package se.alexander.portfolio.chess;
 
 public class Piece {
     private PieceType pieceType;
-    private PieceColor color;
+    private Color color;
     private boolean captured = false;
     private Square currentPosition;
 
-    public Piece(PieceType pieceType, PieceColor color, Square currentPosition) {
+    public Piece(PieceType pieceType, Color color, Square currentPosition) {
         this.pieceType = pieceType;
         this.color = color;
         this.currentPosition = currentPosition;
@@ -16,7 +16,7 @@ public class Piece {
         return pieceType;
     }
 
-    public PieceColor getColor() {
+    public Color getColor() {
         return color;
     }
 

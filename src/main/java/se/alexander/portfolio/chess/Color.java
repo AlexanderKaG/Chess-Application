@@ -1,6 +1,6 @@
 package se.alexander.portfolio.chess;
 
-public enum PieceColor {
+public enum Color {
 
     WHITE, BLACK
 
