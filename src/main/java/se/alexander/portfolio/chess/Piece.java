@@ -1,8 +1,8 @@
 package se.alexander.portfolio.chess;
 
 public class Piece {
-    private PieceType pieceType;
-    private Color color;
+    private final PieceType pieceType;
+    private final Color color;
     private boolean captured = false;
     private Square currentPosition;
 
@@ -24,6 +24,10 @@ public class Piece {
         return captured;
     }
 
+    public void setCaptured(boolean captured) {
+        this.captured = captured;
+    }
+
     public Square getCurrentPosition() {
         return currentPosition;
     }
@@ -32,4 +36,5 @@ public class Piece {
         currentPosition = newSquare;
         return getCurrentPosition();
     }
+
 }
