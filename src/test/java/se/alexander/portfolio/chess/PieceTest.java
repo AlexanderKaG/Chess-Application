@@ -5,12 +5,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static se.alexander.portfolio.chess.PieceType.KNIGHT;
-import static se.alexander.portfolio.chess.PieceType.PAWN;
+import static se.alexander.portfolio.chess.PieceType.*;
 
 public class PieceTest {
-
-
 
     @Test
     @DisplayName("A pawn is a pawn")
@@ -25,6 +22,14 @@ public class PieceTest {
     void knightIsKnight() {
         PieceType pieceType = KNIGHT;
         Piece piece = new Piece(KNIGHT);
+        assertEquals(pieceType, piece.getPieceType());
+    }
+
+    @Test
+    @DisplayName("A bishop is a bishop")
+    void bishopIsBishop() {
+        PieceType pieceType = BISHOP;
+        Piece piece = new Piece(BISHOP);
         assertEquals(pieceType, piece.getPieceType());
     }
 
