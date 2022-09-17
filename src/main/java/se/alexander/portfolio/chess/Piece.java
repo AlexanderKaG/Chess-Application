@@ -6,21 +6,6 @@ public class Piece {
     private boolean captured;
     private Square currentPosition;
 
-    public Piece(PieceType pieceType) {
-        this.pieceType = pieceType;
-    }
-
-    public Piece(PieceType pieceType, PieceColor color) {
-        this.pieceType = pieceType;
-        this.color = color;
-    }
-
-    public Piece(PieceType pieceType, PieceColor color, boolean captured) {
-        this.pieceType = pieceType;
-        this.color = color;
-        this.captured = captured;
-    }
-
     public Piece(PieceType pieceType, PieceColor color, boolean captured, Square currentPosition) {
         this.pieceType = pieceType;
         this.color = color;
