@@ -11,6 +11,6 @@ public class Board {
     }
 
     public Square getSquares(int squareIndex) {
-        return squares.get(0);
+        return squares.get(squareIndex);
     }
 }
