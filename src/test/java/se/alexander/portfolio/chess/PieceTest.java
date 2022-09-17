@@ -59,7 +59,7 @@ class PieceTest {
     @DisplayName("Piece is white")
     void pieceShouldBeWhite() {
         PieceColor pieceColor = PieceColor.WHITE;
-        Piece piece = new Piece(PieceType.KING, PieceColor.BLACK, false, Square.E8);
+        Piece piece = new Piece(PieceType.KING, PieceColor.WHITE, false, Square.E1);
         assertEquals(pieceColor, piece.getColor());
     }
 
