@@ -1,15 +1,15 @@
 package se.alexander.portfolio.chess;
 
 public class Piece {
-    private final PieceType pieceType;
+    private PieceType pieceType;
     private final Color color;
     private boolean captured = false;
-    private Square currentPosition;
+    private Square currentSquare;
 
-    public Piece(PieceType pieceType, Color color, Square currentPosition) {
+    public Piece(PieceType pieceType, Color color, Square currentSquare) {
         this.pieceType = pieceType;
         this.color = color;
-        this.currentPosition = currentPosition;
+        this.currentSquare = currentSquare;
     }
 
     public PieceType getPieceType() {
@@ -28,13 +28,13 @@ public class Piece {
         this.captured = captured;
     }
 
-    public Square getCurrentPosition() {
-        return currentPosition;
+    public Square getCurrentSquare() {
+        return currentSquare;
     }
 
     public Square move(Square newSquare) {
-        currentPosition = newSquare;
-        return getCurrentPosition();
+        currentSquare = newSquare;
+        return getCurrentSquare();
     }
 
 }

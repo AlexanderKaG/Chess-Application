@@ -27,7 +27,7 @@ class PieceTest {
     void pieceShouldBeOnSquareE1() {
         Square square = Square.E1;
         Piece piece = new Piece(PieceType.KING, Color.WHITE, Square.E1);
-        assertEquals(square, piece.getCurrentPosition());
+        assertEquals(square, piece.getCurrentSquare());
     }
 
     @Test
