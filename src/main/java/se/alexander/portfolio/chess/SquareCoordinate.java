@@ -14,7 +14,7 @@ public enum SquareCoordinate {
     A7(BLACK), B7(WHITE), C7(BLACK), D7(WHITE), E7(BLACK), F7(WHITE), G7(BLACK), H7(WHITE),
     A8(WHITE), B8(BLACK), C8(WHITE), D8(BLACK), E8(WHITE), F8(BLACK), G8(WHITE), H8(BLACK);
 
-    private Color color;
+    private final Color color;
 
     SquareCoordinate(Color color) {
         this.color = color;
