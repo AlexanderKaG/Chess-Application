@@ -1,10 +1,10 @@
 package se.alexander.portfolio.chess;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PieceTest {
 
@@ -15,7 +15,7 @@ public class PieceTest {
         Piece piece = new Piece(PieceType.PAWN);
         assertEquals(pieceType, piece.getPieceType());
     }
-    
+
     @Test
     @DisplayName("A knight is a knight")
     void knightIsKnight() {
@@ -62,6 +62,21 @@ public class PieceTest {
         PieceColor pieceColor = PieceColor.WHITE;
         Piece piece = new Piece(PieceType.KING, PieceColor.WHITE);
         assertEquals(pieceColor, piece.getColor());
+    }
+
+    @Test
+    @DisplayName("Piece is black")
+    void pieceShouldBeBlack() {
+        PieceColor pieceColor = PieceColor.BLACK;
+        Piece piece = new Piece(PieceType.KING, PieceColor.BLACK);
+        assertEquals(pieceColor, piece.getColor());
+    }
+
+    @Test
+    @DisplayName("Check that piece hasn't been captured")
+    void pieceShouldNotBeCaptured() {
+        Piece piece = new Piece(PieceType.KING, PieceColor.WHITE, false);
+        assertTrue(piece.isCaptured() == false);
     }
 
 }
