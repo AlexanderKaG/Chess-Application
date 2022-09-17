@@ -2,14 +2,10 @@ package se.alexander.portfolio.chess;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.convert.DataSizeUnit;
 
-import java.nio.file.Files;
+import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-public class PieceTest {
+class PieceTest {
 
     @Test
     @DisplayName("A pawn is a pawn")
@@ -76,17 +72,17 @@ public class PieceTest {
     }
 
     @Test
-    @DisplayName("Check that piece hasn't been captured")
-    void pieceShouldNotBeCaptured() {
+    @DisplayName("Check that piece is not captured when created")
+    void pieceShouldNotBeCapturedUponCreation() {
         Piece piece = new Piece(PieceType.KING, PieceColor.WHITE, false);
-        assertTrue(piece.isCaptured() == false);
+        assertFalse(piece.isCaptured());
     }
 
     @Test
-    @DisplayName("Check that piece has been captured")
+    @DisplayName("Check that piece is captured")
     void pieceShouldBeCaptured() {
         Piece piece = new Piece(PieceType.KING, PieceColor.WHITE, true);
-        assertTrue(piece.isCaptured() == true);
+        assertTrue(piece.isCaptured());
     }
 
     @Test
