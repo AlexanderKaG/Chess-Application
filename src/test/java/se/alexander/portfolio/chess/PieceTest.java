@@ -33,4 +33,12 @@ public class PieceTest {
         assertEquals(pieceType, piece.getPieceType());
     }
 
+    @Test
+    @DisplayName("A rook is a rook")
+    void rookIsRook() {
+        PieceType pieceType = ROOK;
+        Piece piece = new Piece(ROOK);
+        assertEquals(pieceType, piece.getPieceType());
+    }
+
 }
