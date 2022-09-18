@@ -12,7 +12,7 @@ class BoardTest {
     void firstSquareInBoardShouldBeA1() {
         SquareCoordinate squareCoordinate = SquareCoordinate.A1;
         Board board = new Board();
-        assertEquals(squareCoordinate, board.getSquareInBoard(0).getCoordinate());
+        assertEquals(squareCoordinate, board.getCoordinateOfSquare(0));
     }
 
     @Test
@@ -20,7 +20,7 @@ class BoardTest {
     void squareA1ShouldBeBlack() {
         Color color = Color.BLACK;
         Board board = new Board();
-        assertEquals(color, board.getSquareInBoard(0).getColor());
+        assertEquals(color, board.getColorOfSquare(0));
     }
 
     @Test
@@ -30,5 +30,7 @@ class BoardTest {
         Board board = new Board();
         assertEquals(amountOfSquaresInBoard, board.getAmountOfSquaresInBoard());
     }
+
+
 
 }
