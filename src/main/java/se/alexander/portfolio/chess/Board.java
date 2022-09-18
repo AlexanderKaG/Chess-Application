@@ -4,16 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Board {
-    private List<Square> board = new ArrayList<>();
+    private final List<Square> squaresInBoard = new ArrayList<>();
 
     public Board() {
         for (SquareCoordinate coordinate : SquareCoordinate.values()) {
             Square square = new Square(coordinate);
-            board.add(square);
+            squaresInBoard.add(square);
         }
     }
 
     public Square getSquareInBoard(int i) {
-        return board.get(i);
+        return squaresInBoard.get(i);
+    }
+
+    public int getAmountOfSquaresInBoard() {
+        return squaresInBoard.size();
     }
 }

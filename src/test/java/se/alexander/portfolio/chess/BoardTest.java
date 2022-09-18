@@ -23,4 +23,12 @@ class BoardTest {
         assertEquals(color, board.getSquareInBoard(0).getColor());
     }
 
+    @Test
+    @DisplayName("Checks that board consists of 64 squares")
+    void squaresInBoardShouldEquals64() {
+        int amountOfSquaresInBoard = 64;
+        Board board = new Board();
+        assertEquals(amountOfSquaresInBoard, board.getAmountOfSquaresInBoard());
+    }
+
 }
