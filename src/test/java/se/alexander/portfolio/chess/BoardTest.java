@@ -17,11 +17,11 @@ class BoardTest {
     }
 
     @Test
-    @DisplayName("Checks that A1 square is black")
+    @DisplayName("Checks that A3 square is black")
     void squareA1ShouldBeBlack() {
         Color color = Color.BLACK;
         Board board = new Board();
-        assertEquals(color, board.getColorOfSquare(squareBasedOnBoardAndCoordinate(board, A1)));
+        assertEquals(color, board.getColorOfSquare(squareBasedOnBoardAndCoordinate(board, A3)));
     }
 
     @Test

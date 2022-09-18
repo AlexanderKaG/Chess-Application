@@ -26,6 +26,7 @@ public class Board {
         return getSquareInBoard(square.getCoordinate()).getColor();
     }
 
+    @SuppressWarnings("java:S1488")
     public SquareCoordinate getCoordinateOfSquare(Square square) {
         SquareCoordinate coordinate = square.getCoordinate();
         return coordinate;
