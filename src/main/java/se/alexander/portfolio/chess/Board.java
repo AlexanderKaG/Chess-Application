@@ -13,19 +13,28 @@ public class Board {
         }
     }
 
-    public Square getSquareInBoard(int i) {
-        return squaresInBoard.get(i);
+    public Square getSquareInBoard(SquareCoordinate coordinate) {
+        for (Square square : squaresInBoard) {
+            if (square.getCoordinate() == coordinate)  {
+                return square;
+            }
+        }
+        return null;
     }
-
+/*
     public Color getColorOfSquare(int i) {
         return getSquareInBoard(i).getColor();
     }
 
-    public SquareCoordinate getCoordinateOfSquare(int i) {
-        return getSquareInBoard(i).getCoordinate();
+ */
+
+    public SquareCoordinate getCoordinateOfSquare(Square square) {
+        SquareCoordinate coordinate = square.getCoordinate();
+        return coordinate;
     }
 
     public int getAmountOfSquaresInBoard() {
         return squaresInBoard.size();
     }
+
 }

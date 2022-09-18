@@ -14,4 +14,5 @@ public class Square {
     public Color getColor() {
         return getCoordinate().getColor();
     }
+
 }
