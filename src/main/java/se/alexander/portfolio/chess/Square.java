@@ -10,4 +10,8 @@ public class Square {
     public SquareCoordinate getCoordinate() {
         return coordinate;
     }
+
+    public Color getColor() {
+        return getCoordinate().getColor();
+    }
 }
