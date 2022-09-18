@@ -6,10 +6,9 @@ public class Piece {
     private boolean captured = false;
     private Square currentSquare;
 
-    public Piece(PieceType pieceType, Color color, Square currentSquare) {
+    public Piece(PieceType pieceType, Color color) {
         this.pieceType = pieceType;
         this.color = color;
-        this.currentSquare = currentSquare;
     }
 
     public PieceType getPieceType() {
