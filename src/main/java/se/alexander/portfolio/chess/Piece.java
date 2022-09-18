@@ -4,7 +4,6 @@ public class Piece {
     private PieceType pieceType;
     private final Color color;
     private boolean captured = false;
-    private Square currentSquare;
 
     public Piece(PieceType pieceType, Color color) {
         this.pieceType = pieceType;
@@ -25,15 +24,6 @@ public class Piece {
 
     public void setCaptured(boolean captured) {
         this.captured = captured;
-    }
-
-    public SquareCoordinate getCurrentSquareCoordinate() {
-        return currentSquare.getCoordinate();
-    }
-
-    public SquareCoordinate move(Square newSquare) {
-        this.currentSquare = newSquare;
-        return getCurrentSquareCoordinate();
     }
 
 }
