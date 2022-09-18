@@ -15,17 +15,13 @@ class BoardTest {
         assertEquals(squareCoordinate, board.getCoordinateOfSquare(board.getSquareInBoard(SquareCoordinate.A1)));
     }
 
-/*
     @Test
     @DisplayName("Checks that A1 square is black")
     void squareA1ShouldBeBlack() {
         Color color = Color.BLACK;
         Board board = new Board();
-        assertEquals(color, board.getColorOfSquare(0));
+        assertEquals(color, board.getColorOfSquare(board.getSquareInBoard(SquareCoordinate.A1)));
     }
-
- */
-
 
     @Test
     @DisplayName("Checks that board consists of 64 squares")
@@ -34,6 +30,5 @@ class BoardTest {
         Board board = new Board();
         assertEquals(amountOfSquaresInBoard, board.getAmountOfSquaresInBoard());
     }
-
 
 }

@@ -15,18 +15,16 @@ public class Board {
 
     public Square getSquareInBoard(SquareCoordinate coordinate) {
         for (Square square : squaresInBoard) {
-            if (square.getCoordinate() == coordinate)  {
+            if (square.getCoordinate() == coordinate) {
                 return square;
             }
         }
         return null;
     }
-/*
-    public Color getColorOfSquare(int i) {
-        return getSquareInBoard(i).getColor();
-    }
 
- */
+    public Color getColorOfSquare(Square square) {
+        return getSquareInBoard(square.getCoordinate()).getColor();
+    }
 
     public SquareCoordinate getCoordinateOfSquare(Square square) {
         SquareCoordinate coordinate = square.getCoordinate();
