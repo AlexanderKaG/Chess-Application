@@ -3,8 +3,7 @@ package se.alexander.portfolio.chess;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertNotSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class GameTest {
 
@@ -19,8 +18,9 @@ class GameTest {
     @Test
     @DisplayName("Checks that 16 white pieces are created when game is created.")
     void createTheWhitePieces() {
+        int amountOfPieces = 16;
         Game game = new Game();
-        assertTrue(game.getWhitePieces().size() == 16);
+        assertEquals(amountOfPieces, game.getWhitePieces().size());
     }
 
 }

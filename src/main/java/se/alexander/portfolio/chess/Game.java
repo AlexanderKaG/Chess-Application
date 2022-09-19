@@ -1,57 +1,56 @@
 package se.alexander.portfolio.chess;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Game {
-    private Map<String, Piece> whitePieces;
+    private final Map<String, Piece> whitePieces;
 
     public Game() {
         this.whitePieces = createWhitePieces();
     }
 
     private Map<String, Piece> createWhitePieces() {
-        Map<String, Piece> whitePieces = new HashMap<>();
+        Map<String, Piece> lightPieces = new HashMap<>();
         Piece aPawn = new Piece(PieceType.PAWN, Color.WHITE);
-        whitePieces.put("aPawn", aPawn);
+        lightPieces.put("aPawn", aPawn);
         Piece bPawn = new Piece(PieceType.PAWN, Color.WHITE);
-        whitePieces.put("bPawn", bPawn);
+        lightPieces.put("bPawn", bPawn);
         Piece cPawn = new Piece(PieceType.PAWN, Color.WHITE);
-        whitePieces.put("cPawn", cPawn);
+        lightPieces.put("cPawn", cPawn);
         Piece dPawn = new Piece(PieceType.PAWN, Color.WHITE);
-        whitePieces.put("dPawn", dPawn);
+        lightPieces.put("dPawn", dPawn);
         Piece ePawn = new Piece(PieceType.PAWN, Color.WHITE);
-        whitePieces.put("ePawn", ePawn);
+        lightPieces.put("ePawn", ePawn);
         Piece fPawn = new Piece(PieceType.PAWN, Color.WHITE);
-        whitePieces.put("fPawn", fPawn);
+        lightPieces.put("fPawn", fPawn);
         Piece gPawn = new Piece(PieceType.PAWN, Color.WHITE);
-        whitePieces.put("gPawn", gPawn);
+        lightPieces.put("gPawn", gPawn);
         Piece hPawn = new Piece(PieceType.PAWN, Color.WHITE);
-        whitePieces.put("hPawn", hPawn);
+        lightPieces.put("hPawn", hPawn);
 
         Piece aRook = new Piece(PieceType.ROOK, Color.WHITE);
-        whitePieces.put("aRook", aRook);
+        lightPieces.put("aRook", aRook);
         Piece hRook = new Piece(PieceType.ROOK, Color.WHITE);
-        whitePieces.put("hRook", hRook);
+        lightPieces.put("hRook", hRook);
 
         Piece bKnight = new Piece(PieceType.KNIGHT, Color.WHITE);
-        whitePieces.put("bKnight", bKnight);
+        lightPieces.put("bKnight", bKnight);
         Piece gKnight = new Piece(PieceType.KNIGHT, Color.WHITE);
-        whitePieces.put("gKnight", gKnight);
+        lightPieces.put("gKnight", gKnight);
 
         Piece darkSquaredBishop = new Piece(PieceType.BISHOP, Color.WHITE);
-        whitePieces.put("darkSquaredBishop", darkSquaredBishop);
+        lightPieces.put("darkSquaredBishop", darkSquaredBishop);
         Piece lightSquaredBishop = new Piece(PieceType.BISHOP, Color.WHITE);
-        whitePieces.put("lightSquaredBishop", lightSquaredBishop);
+        lightPieces.put("lightSquaredBishop", lightSquaredBishop);
 
         Piece queen = new Piece(PieceType.QUEEN, Color.WHITE);
-        whitePieces.put("queen", queen);
+        lightPieces.put("queen", queen);
 
         Piece king = new Piece(PieceType.KING, Color.WHITE);
-        whitePieces.put("king", king);
+        lightPieces.put("king", king);
 
-        return whitePieces;
+        return lightPieces;
     }
 
     public Map<String, Piece> getWhitePieces() {
