@@ -1,4 +1,4 @@
-package se.alexander.portfolio.chess;
+package com.github.alexanderkag.portfolio.chess;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -16,7 +16,7 @@ class GameTest {
     }
 
     @Test
-    @DisplayName("Checks that there are 16 white pieces.")
+    @DisplayName("Checks that there are 16 white pieces in a game.")
     void amountOfWhitePiecesShouldBe16() {
         int amountOfPieces = 16;
         Game game = new Game();
@@ -24,7 +24,7 @@ class GameTest {
     }
 
     @Test
-    @DisplayName("Checks that there are 16 black pieces.")
+    @DisplayName("Checks that there are 16 black pieces in a game.")
     void amountOfBlackPiecesShouldBe16() {
         int amountOfPieces = 16;
         Game game = new Game();

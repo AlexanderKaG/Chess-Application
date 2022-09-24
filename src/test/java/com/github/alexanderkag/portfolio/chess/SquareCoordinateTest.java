@@ -1,4 +1,4 @@
-package se.alexander.portfolio.chess;
+package com.github.alexanderkag.portfolio.chess;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

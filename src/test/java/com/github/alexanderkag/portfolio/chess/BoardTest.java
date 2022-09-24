@@ -1,19 +1,18 @@
-package se.alexander.portfolio.chess;
+package com.github.alexanderkag.portfolio.chess;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static se.alexander.portfolio.chess.SquareCoordinate.*;
 
 class BoardTest {
 
     @Test
     @DisplayName("Checks that the first square of board is A1")
     void firstSquareInBoardShouldBeA1() {
-        SquareCoordinate squareCoordinate = A1;
+        SquareCoordinate squareCoordinate = SquareCoordinate.A1;
         Board board = new Board();
-        assertEquals(squareCoordinate, board.getCoordinateOfSquare(squareBasedOnBoardAndCoordinate(board, A1)));
+        assertEquals(squareCoordinate, board.getCoordinateOfSquare(squareBasedOnBoardAndCoordinate(board, SquareCoordinate.A1)));
     }
 
     @Test
@@ -21,7 +20,7 @@ class BoardTest {
     void squareA1ShouldBeBlack() {
         Color color = Color.BLACK;
         Board board = new Board();
-        assertEquals(color, board.getColorOfSquare(squareBasedOnBoardAndCoordinate(board, A3)));
+        assertEquals(color, board.getColorOfSquare(squareBasedOnBoardAndCoordinate(board, SquareCoordinate.A3)));
     }
 
     @Test

@@ -1,4 +1,4 @@
-package se.alexander.portfolio.chess;
+package com.github.alexanderkag.portfolio.chess;
 
 import java.util.ArrayList;
 import java.util.List;

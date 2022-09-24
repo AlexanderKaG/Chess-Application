@@ -1,4 +1,4 @@
-package se.alexander.portfolio.chess;
+package com.github.alexanderkag.portfolio.chess;
 
 public enum PieceType {
 
